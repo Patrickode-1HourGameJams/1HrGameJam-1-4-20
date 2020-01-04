@@ -62,7 +62,7 @@ public class GameManager : MonoBehaviour
             GameObject newBit = Instantiate
                 (
                 bitPrefab,
-                new Vector3(Random.Range(-10.75f, 10.75f), Random.Range(-4.5f, 4.5f)),
+                new Vector3(Random.Range(-6f, 6f), Random.Range(-4.5f, 4.5f)),
                 Quaternion.identity
                 );
             bits.Add(newBit);
