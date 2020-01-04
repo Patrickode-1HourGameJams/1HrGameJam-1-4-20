@@ -7,6 +7,8 @@ public class BitClicked : MonoBehaviour
     private bool isClicked;
 
     public SpriteRenderer rend;
+    public delegate void ClickAction();
+    public static event ClickAction OnBitClicked;
 
     private void OnMouseDown()
     {
@@ -14,6 +16,7 @@ public class BitClicked : MonoBehaviour
         {
             isClicked = true;
             rend.color = Color.black;
+            OnBitClicked?.Invoke();
         }
     }
 }
